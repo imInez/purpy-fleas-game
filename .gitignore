@@ -1,0 +1,7 @@
+.DS_Store
+*.pyc
+flea.py
+settings.py
+purpy.py
+_pycache_
+
