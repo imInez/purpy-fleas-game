@@ -429,7 +429,6 @@ class PurpyFleas:
     def update_level(self):
         if len(self.killed_fleas) % int((len(self.fleas)*0.1)) == 0 and len(self.killed_fleas) > 0:
             self.settings.velocity -= 100
-            print('updating velocity to: ', self.settings.velocity)
 
     def _check_showme_button(self, mouse_pos):
         if self.showme_button.rect.collidepoint(mouse_pos):
@@ -491,7 +490,6 @@ class PurpyFleas:
         if self.settings.game_active is True:
             now = pygame.time.get_ticks()
             if now - self.last_refill > self.settings.velocity:
-                print('used velocity: ', self.settings.velocity)
                 self.screen.fill(self.settings.play_bg_color)
                 self.last_refill = now
         elif self.settings.intro_active is True:
